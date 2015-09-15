@@ -1,0 +1,26 @@
+{
+  "name": "ng-waitstaff-calc",
+  "version": "1.0.0",
+  "description": "Basic Angular app to help waitstaff track their tips over a shift",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencodezen/ngWaitstaffCalc.git"
+  },
+  "keywords": [
+    "AngularJS"
+  ],
+  "author": "Ben Hong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bencodezen/ngWaitstaffCalc/issues"
+  },
+  "homepage": "https://github.com/bencodezen/ngWaitstaffCalc#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.1"
+  }
+}
