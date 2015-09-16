@@ -14,13 +14,13 @@
 			<div class="column">
 				<section id="meal-input">
 					<h2>Enter the Meal Details</h2>
-					<form name="mealForm">
+					<form name="mealForm" ng-submit="inputMeal();">
 						<label for="basePrice">Base Meal Price: $</label>
-						<input name="basePrice" type="number" step="any" min="0">
+						<input ng-model="basePrice" name="basePrice" type="number" step="0.01" min="0">
 						<label for="taxRate">Tax Rate: </label>
-						<input name="taxRate" type="number" step="any" min="0">%
+						<input ng-model="taxRate" name="taxRate" type="number" min="0">%
 						<label for="tipPercent">Tip Percent: </label>
-						<input name="tipPercent" type="number" step="any" min="0">%
+						<input ng-model="tipPercent" name="tipPercent" type="number" min="0">%
 						<input type="submit" value="Submit"><button>Cancel</button>
 					</form>
 				</section>
@@ -28,9 +28,9 @@
 			<div class="column">
 				<section id="customer-charges">
 					<h2>Customer Charges</h2>
-					<p><span class="label">Subtotal</span> <span id="subtotal">$0.00</span></p>
-					<p><span class="label">Tip</span> <span id="tip-amount">$0.00</span></p>
-					<p><span class="label">Total</span> <span id="total">$0.00</span></p>
+					<p><span class="label">Subtotal</span> <span id="subtotal">{{ subtotal | currency }}</span></p>
+					<p><span class="label">Tip</span> <span id="tip-amount">{{ tipAmount | currency }}</span></p>
+					<p><span class="label">Total</span> <span id="total">{{ total | currency }}</span></p>
 				</section>
 				<section id="earning-info">
 					<h2>Customer Charges</h2>
