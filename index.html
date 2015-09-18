@@ -34,9 +34,9 @@
 				</section>
 				<section id="earning-info">
 					<h2>My Earnings Info</h2>
-					<p><span class="label">Tip Total:</span> <span id="tip-total">$0.00</span></p>
-					<p><span class="label">Meal Count:</span> <span id="meal-count">$0.00</span></p>
-					<p><span class="label">Average Tip Per Meal:</span> <span id="average-tip">$0.00</span></p>
+					<p><span class="label">Tip Total:</span> <span id="tip-total">{{ tipTotal | currency }}</span></p>
+					<p><span class="label">Meal Count:</span> <span id="meal-count">{{ mealCount }}</span></p>
+					<p><span class="label">Average Tip Per Meal:</span> <span id="average-tip">{{ averageTip | currency }}</span></p>
 				</section>
 			</div>
 			<button>Reset</button>
