@@ -32,9 +32,19 @@ angular.module('staffCalcApp', [])
 		  $scope.averageTip = $scope.tipTotal / $scope.mealCount;
 		};
 
-		$scope.reset = function() {
+		$scope.cancel = function() {
 			$scope.basePrice = 0;
 			$scope.taxRate = 0;
 			$scope.tipPercent = 0;
+		};
+
+		$scope.reset = function() {
+			$scope.cancel();
+			$scope.subtotal = 0;
+			$scope.tipAmount = 0;
+			$scope.total = 0;
+			$scope.tipTotal = 0;
+			$scope.mealCount = 0;
+			$scope.averageTip = 0;
 		};
 	});
