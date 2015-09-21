@@ -29,9 +29,9 @@ h1 {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	-webkit-box-flex: 1;
-	-webkit-flex: 1 1 45%;
-	-ms-flex: 1 1 45%;
-	flex: 1 1 45%;
+	-webkit-flex: 1 1 40%;
+	-ms-flex: 1 1 40%;
+	flex: 1 1 40%;
 	border: 1px solid black;
 	padding: 5px 25px;
 }
