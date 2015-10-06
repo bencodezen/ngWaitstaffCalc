@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="column">
+    <section id="meal-input">
+      <h2>Enter the Meal Details</h2>
+      <form name="mealForm" ng-submit="inputMeal();">
+        <label for="basePrice">Base Meal Price: $</label>
+        <input ng-model="basePrice" name="basePrice" type="number" step="0.01" min="0">
+        <br>
+        <label for="taxRate">Tax Rate: </label>
+        <input ng-model="taxRate" name="taxRate" type="number" min="0">%
+        <br>
+        <label for="tipPercent">Tip Percent: </label>
+        <input ng-model="tipPercent" name="tipPercent" type="number" min="0">%
+        <br>
+        <input type="submit" value="Submit" /><button ng-click="cancel();" type="button">Cancel</button>
+      </form>
+    </section>
+  </div>
+</div>

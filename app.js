@@ -3,6 +3,14 @@ angular.module('staffCalcApp', ['ngRoute'])
 		$routeProvider.when('/', {
 			templateUrl : 'home.html',
 			controller : 'HomeCtrl'
+		}).when('/add-meal', {
+			templateUrl : 'add-meal.html',
+			controller : 'staffCalcCtrl'
+		}).when('/view-earnings', {
+			templateUrl : 'view-earnings.html',
+			controller : 'staffCalcCtrl'
+		}).otherwise({
+			redirectTo : '/'
 		});
 	}])
 	.controller('HomeCtrl', function($scope) {
