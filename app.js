@@ -13,19 +13,18 @@ angular.module('staffCalcApp', ['ngRoute'])
 			redirectTo : '/'
 		});
 	}])
-	.controller('HomeCtrl', function($scope) {
-		// empty for now
-	})
-	.controller('staffCalcCtrl', function($scope) {
+	.controller('HomeCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+		$rootScope.mealCount = 0;
+		$rootScope.tipTotal = 0;
+		$rootScope.averageTip = 0;
+	}])
+	.controller('staffCalcCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
 		$scope.basePrice = 0;
 		$scope.taxRate = 0;
 		$scope.tipPercent = 0;
 		$scope.subtotal = 0;
 		$scope.tipAmount = 0;
 		$scope.total = 0;
-		$scope.tipTotal = 0;
-		$scope.mealCount = 0;
-		$scope.averageTip = 0;
 
 		$scope.calcSubtotal = function(basePrice, taxRate) {
 			return basePrice + (basePrice * taxRate);
@@ -44,9 +43,9 @@ angular.module('staffCalcApp', ['ngRoute'])
 		  $scope.subtotal = subtotal;
 		  $scope.tipAmount = tipAmount;
 		  $scope.total = subtotal + tipAmount;
-		  $scope.mealCount++;
-		  $scope.tipTotal += tipAmount;
-		  $scope.averageTip = $scope.tipTotal / $scope.mealCount;
+		  $rootScope.mealCount++;
+		  $rootScope.tipTotal += tipAmount;
+		  $rootScope.averageTip = $rootScope.tipTotal / $rootScope.mealCount;
 		};
 
 		$scope.cancel = function() {
@@ -60,8 +59,8 @@ angular.module('staffCalcApp', ['ngRoute'])
 			$scope.subtotal = 0;
 			$scope.tipAmount = 0;
 			$scope.total = 0;
-			$scope.tipTotal = 0;
-			$scope.mealCount = 0;
-			$scope.averageTip = 0;
+			$rootScope.tipTotal = 0;
+			$rootScope.mealCount = 0;
+			$rootScope.averageTip = 0;
 		};
-	});
+	}]);
