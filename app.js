@@ -1,4 +1,13 @@
-angular.module('staffCalcApp', [])
+angular.module('staffCalcApp', ['ngRoute'])
+	.config(['$routeProvider', function($routeProvider) {
+		$routeProvider.when('/', {
+			templateUrl : 'home.html',
+			controller : 'HomeCtrl'
+		});
+	}])
+	.controller('HomeCtrl', function($scope) {
+		// empty for now
+	})
 	.controller('staffCalcCtrl', function($scope) {
 		$scope.basePrice = 0;
 		$scope.taxRate = 0;

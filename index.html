@@ -14,40 +14,7 @@
 			<li><a href="#">My Earnings</a></li>
 		</ul>
 	</nav>
-	<div class="container">
-		<div class="column">
-			<section id="meal-input">
-				<h2>Enter the Meal Details</h2>
-				<form name="mealForm" ng-submit="inputMeal();">
-					<label for="basePrice">Base Meal Price: $</label>
-					<input ng-model="basePrice" name="basePrice" type="number" step="0.01" min="0">
-					<br>
-					<label for="taxRate">Tax Rate: </label>
-					<input ng-model="taxRate" name="taxRate" type="number" min="0">%
-					<br>
-					<label for="tipPercent">Tip Percent: </label>
-					<input ng-model="tipPercent" name="tipPercent" type="number" min="0">%
-					<br>
-					<input type="submit" value="Submit" /><button ng-click="cancel();" type="button">Cancel</button>
-				</form>
-			</section>
-		</div>
-		<div class="column">
-			<section id="customer-charges">
-				<h2>Customer Charges</h2>
-				<p><span class="label">Subtotal</span> <span id="subtotal">{{ subtotal | currency }}</span></p>
-				<p><span class="label">Tip</span> <span id="tip-amount">{{ tipAmount | currency }}</span></p>
-				<p><span class="label">Total</span> <span id="total">{{ total | currency }}</span></p>
-			</section>
-			<section id="earning-info">
-				<h2>My Earnings Info</h2>
-				<p><span class="label">Tip Total:</span> <span id="tip-total">{{ tipTotal | currency }}</span></p>
-				<p><span class="label">Meal Count:</span> <span id="meal-count">{{ mealCount }}</span></p>
-				<p><span class="label">Average Tip Per Meal:</span> <span id="average-tip">{{ averageTip | currency }}</span></p>
-			</section>
-		</div>
-		<button ng-click="reset();" type="button">Reset</button>
-	</div>
+	<div ng-view></div>
 
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
