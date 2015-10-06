@@ -16,4 +16,12 @@
       </form>
     </section>
   </div>
+  <div class="column">
+    <section id="customer-charges">
+      <h2>Customer Charges</h2>
+      <p><span class="label">Subtotal</span> <span id="subtotal">{{ subtotal | currency }}</span></p>
+      <p><span class="label">Tip</span> <span id="tip-amount">{{ tipAmount | currency }}</span></p>
+      <p><span class="label">Total</span> <span id="total">{{ total | currency }}</span></p>
+    </section>
+  </div>
 </div>
