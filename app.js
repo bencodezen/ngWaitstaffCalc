@@ -1,4 +1,4 @@
-angular.module('staffCalcApp', ['ngRoute'])
+angular.module('staffCalcApp', ['ngRoute', 'ngAnimate'])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/', {
 			templateUrl : 'home.html',
